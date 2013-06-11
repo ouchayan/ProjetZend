@@ -1,0 +1,16 @@
+<table>
+    <?php foreach ($this->entries as $entry): ?>
+    <tr>
+        <td><?php echo $this->escape($entry->getNom()); ?></td>
+         <td><?php echo $this->escape($entry->getNom()); ?></td>
+          <td> 
+          <a href="<?php echo $this->url(array('controller'=>'administrateur',
+                'action'=>'update', 'id'=>$entry->getIdadministrateur()));?>">Modifier</a>
+          <a href="<?php echo $this->url(array('controller'=>'administrateur',
+                'action'=>'delete', 'id'=>$entry->getIdadministrateur()));?>">Supprimer</a>
+          
+          </td>
+
+    </tr>
+     <?php endforeach ?>
+</table>
